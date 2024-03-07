@@ -12,7 +12,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() , execute: {
             let vc = LoginViewController()
             self.resetControllers([vc])
         })

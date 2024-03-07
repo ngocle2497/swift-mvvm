@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
 
+    @IBOutlet weak var buttonTouch: UIButton!
     @IBOutlet weak var btnTouch: UIView!
     @IBOutlet weak var labelAgreement: UILabel!
     override func viewDidLoad() {
@@ -30,8 +31,26 @@ class LoginViewController: UIViewController {
         
         labelAgreement.attributedText = attributedText
         
-        btnTouch.layer.cornerRadius = 8
+        buttonTouch.layer.bounds.size.width = 30;
+        buttonTouch.layer.bounds.size.height = 30
+        buttonTouch.clipsToBounds = true
+        buttonTouch.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
+        buttonTouch.layer.cornerRadius = 10
+        buttonTouch.layer.borderWidth = 1
+        buttonTouch.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
         
+        let imageFigerprint = UIImage(named: "fingerprint")
+        buttonTouch.addTarget(self, action: #selector(onTouchPressed), for: .touchUpInside)
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = imageFigerprint;
+        configuration.imagePadding = 4
+        
+        
+        buttonTouch.configuration = configuration
+    }
+    
+    @objc func onTouchPressed() {
+        print("Sometime")
     }
 
 }

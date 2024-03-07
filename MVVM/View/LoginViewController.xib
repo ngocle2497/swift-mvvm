@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="MVVM" customModuleProvider="target">
             <connections>
-                <outlet property="btnTouch" destination="UAA-Jz-sF3" id="bTn-4v-S0t"/>
+                <outlet property="buttonTouch" destination="6QH-TQ-GS9" id="YCt-g8-emA"/>
                 <outlet property="labelAgreement" destination="gcv-Ua-EB4" id="Dlk-Fd-aMk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -110,7 +109,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" name="AccentColor"/>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-Wm-CkP">
                     <rect key="frame" x="16" y="652" width="362" height="240"/>
@@ -124,23 +122,11 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAA-Jz-sF3">
-                    <rect key="frame" x="162" y="723.33333333333337" width="69" height="69"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="GDH-OQ-fwd">
-                            <rect key="frame" x="4" y="4" width="61" height="61"/>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" red="0.011764705882352941" green="0.52549019607843139" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="GDH-OQ-fwd" secondAttribute="bottom" constant="4" id="J1n-fc-u8j"/>
-                        <constraint firstItem="GDH-OQ-fwd" firstAttribute="top" secondItem="UAA-Jz-sF3" secondAttribute="top" constant="4" id="V6W-PI-K6A"/>
-                        <constraint firstAttribute="height" constant="69" id="dDQ-Qb-Yz8"/>
-                        <constraint firstAttribute="width" constant="69" id="dex-S4-B0q"/>
-                        <constraint firstAttribute="trailing" secondItem="GDH-OQ-fwd" secondAttribute="trailing" constant="4" id="duI-wV-Qvp"/>
-                        <constraint firstItem="GDH-OQ-fwd" firstAttribute="leading" secondItem="UAA-Jz-sF3" secondAttribute="leading" constant="4" id="nmb-zs-bBK"/>
-                    </constraints>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QH-TQ-GS9">
+                    <rect key="frame" x="184.66666666666666" y="782.33333333333337" width="24" height="14"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,7 +136,6 @@
                 <constraint firstItem="Rgw-6d-ewk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="C8N-Pe-M1H"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vXN-an-O61" secondAttribute="trailing" constant="16" id="Dyp-ue-5b6"/>
                 <constraint firstItem="leF-2D-uLp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EaE-Hu-99s"/>
-                <constraint firstItem="UAA-Jz-sF3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="G1a-DF-Whd"/>
                 <constraint firstItem="gcv-Ua-EB4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="L51-gL-PD4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vXN-an-O61" secondAttribute="bottom" constant="345.99999999999994" id="Lzg-Qm-DjQ"/>
                 <constraint firstItem="Rgw-6d-ewk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MiE-fl-nZT"/>
@@ -158,10 +143,10 @@
                 <constraint firstItem="Bsw-yC-gDv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RKw-rB-2SO"/>
                 <constraint firstItem="gcv-Ua-EB4" firstAttribute="top" secondItem="Rgw-6d-ewk" secondAttribute="bottom" constant="16" id="VEb-2I-NZj"/>
                 <constraint firstItem="Bsw-yC-gDv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yhj-oC-AXU"/>
-                <constraint firstItem="UAA-Jz-sF3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aGR-wZ-21w"/>
                 <constraint firstAttribute="bottom" secondItem="leF-2D-uLp" secondAttribute="bottom" constant="-10" id="bft-I4-u86"/>
                 <constraint firstItem="gcv-Ua-EB4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cyP-3z-0w3"/>
-                <constraint firstItem="Bsw-yC-gDv" firstAttribute="top" secondItem="UAA-Jz-sF3" secondAttribute="bottom" constant="4" id="iRL-uf-RVo"/>
+                <constraint firstItem="Bsw-yC-gDv" firstAttribute="top" secondItem="6QH-TQ-GS9" secondAttribute="bottom" id="d6b-hR-mkD"/>
+                <constraint firstItem="6QH-TQ-GS9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="do4-DT-BjI"/>
                 <constraint firstItem="vXN-an-O61" firstAttribute="top" secondItem="gcv-Ua-EB4" secondAttribute="bottom" constant="20" id="ipW-FM-xuN"/>
                 <constraint firstItem="vXN-an-O61" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mix-ct-5op"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Bsw-yC-gDv" secondAttribute="bottom" id="oaT-kb-hVq"/>
@@ -173,13 +158,9 @@
     </objects>
     <resources>
         <image name="bg_login" width="361" height="240"/>
-        <image name="fingerprint" width="48.333332061767578" height="57"/>
         <image name="ic_email" width="24" height="24"/>
         <image name="ic_password" width="28" height="31"/>
         <image name="login_subtract" width="414" height="262.66665649414062"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
