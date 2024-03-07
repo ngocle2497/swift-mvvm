@@ -7,5 +7,7 @@ target 'MVVM' do
 
   # Pods for MVVM
   pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end
