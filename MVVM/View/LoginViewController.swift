@@ -1,56 +1,40 @@
-//
-//  LoginViewController.swift
-//  MVVM
-//
-//  Created by Ngoc H. Le on 07/03/2024.
-//
-
 import UIKit
+import MMKV
+class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating {
 
-class LoginViewController: UIViewController {
-
-
-    @IBOutlet weak var buttonTouch: UIButton!
-    @IBOutlet weak var btnTouch: UIView!
-    @IBOutlet weak var labelAgreement: UILabel!
+    @Global var userSetting: UserSettings
+    
+    @IBOutlet weak var lbterm: UITextView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var inputEmail: UITextField!
+    @IBOutlet weak var inputPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
-    }
-    func setupView(){
-        let string1 = "By signing in you are agreeing our "
-        let string2 = "Term and privacy policy"
-        
-        let attr1 = [NSAttributedString.Key.foregroundColor: UIColor(107, 94, 94, 1)]
-        let attr2 = [NSAttributedString.Key.foregroundColor: UIColor(3, 134, 208, 1)]
-        
-        let attributedText = NSMutableAttributedString(string: string1, attributes: attr1);
-        
-        attributedText.append(NSMutableAttributedString(string: string2, attributes: attr2))
-        
-        labelAgreement.attributedText = attributedText
-        
-        buttonTouch.layer.bounds.size.width = 30;
-        buttonTouch.layer.bounds.size.height = 30
-        buttonTouch.clipsToBounds = true
-        buttonTouch.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
-        buttonTouch.layer.cornerRadius = 10
-        buttonTouch.layer.borderWidth = 1
-        buttonTouch.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        let imageFigerprint = UIImage(named: "fingerprint")
-        buttonTouch.addTarget(self, action: #selector(onTouchPressed), for: .touchUpInside)
-        var configuration = UIButton.Configuration.filled()
-        configuration.image = imageFigerprint;
-        configuration.imagePadding = 4
-        
-        
-        buttonTouch.configuration = configuration
+        registerUpdates()
     }
     
-    @objc func onTouchPressed() {
-        print("Sometime")
+    func update() {
+        print("Login View Updating: \(userSetting.isAuthenticated)")
+        lbterm.textColor = ThemeManager.colorShared.primary1
     }
-
+    func setupView(){
+        loginButton.layer.cornerRadius = 20
+        
+    }
+    
+    @IBAction func onLoginPressed(_ sender: Any) {
+        if userSetting.isAuthenticated == true {
+            ThemeManager.colorShared = DarkColorTheme()
+        } else {
+            ThemeManager.colorShared = LightColorTheme()
+        }
+        
+        userSetting.isAuthenticated.toggle()
+//        print("Value is: \(LocalStorage.shared.appToken)")
+//        LocalStorage.shared.appToken = "123"
+        
+//        print("Decrypted: \(ColorManager.shared.primary1)")
+        print("ABC: \("9OutPkdUaQyRTeKppfgZurs5+DIcqiITl/lRz0hTfI9N98jF0dDdvKIodtez4BVlBm8a2Rzt/5zy0kxpU7pnuMLDH7onbLCrVkc71LMXPuNqODTAJiBXW5FZqiwR4kfayJrAEEWpOAZGq04ZEP4rESlfsQwn8CYgLjBYQpRiWOPBfHcpo8NV3g1ommyDfeSlDUPRdafqSmRIInZVMEv7KnOz9wIZAq/y37ahzaSeVm8GbxrZHO3/nPLSTGlTume4+pYVeLRtaskkqgQgSDTlyR9CsyrtvyKPMiszlYnHMRX8jDyLgwgUlhMYYKs3NRf5UdEGL5oUAW6X4OaSlZNDaG0Scl8ATn0YhGevEPL99aD9g4f9ngwGmxOgfUFL/3LCrlhxx7MhMKLctXa7UswTxugOm0X+2KGToSA8b85TOO5vUlX3MhEqc8qIhAC7tc5Tc9/MoEZzz1nrbFsvz8yRdGCocf8srVE/opvRJ/twAqTawDjC4qxlg+EkoPphJPBhvedQ7cWDVkhGcOesASDvo9zRCqJdv8EPglgg1xaKeCPJ8hpC88OqnQChOkESQC1ww8H4HNIc2ldAcUMTwKfJc31kutwegFAoUJO74XCPpGuHrQD+sIyDlY/c6Xwl6vP6I81vi5fZFxWNNFJfoRyXxQ==".aesDecrypt(password: "SecretPassphrase")?.toDic()?["bundle_id"] ?? "NO")")
+    }
 }

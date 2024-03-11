@@ -1,10 +1,3 @@
-//
-//  SplashViewController.swift
-//  MVVM
-//
-//  Created by Ngoc H. Le on 07/03/2024.
-//
-
 import UIKit
 
 class SplashViewController: UIViewController {

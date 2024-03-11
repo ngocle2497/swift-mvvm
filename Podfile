@@ -9,5 +9,7 @@ target 'MVVM' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'MMKV'
+  pod 'CryptoSwift'
 
 end

@@ -1,10 +1,3 @@
-//
-//  NetworkService.swift
-//  MVVM
-//
-//  Created by Ngoc H. Le on 06/03/2024.
-//
-
 import Foundation
 import Alamofire
 
