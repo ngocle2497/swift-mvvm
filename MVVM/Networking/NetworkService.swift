@@ -1,71 +1,36 @@
 import Foundation
+import RxSwift
+import Moya
 import Alamofire
 
-enum NetworkError: Error {
-    case urlError
-    case cannotParseData
+struct BaseError: Error {
+    let code: Int?
+    let message: String?
 }
 
 
-struct NetworkReponse<T> {
-    var data: T? = nil;
-    var status: Bool = false;
-    var message: String = ""
-    init(data: T? = nil, status: Bool = true, message: String = ""){
-        self.data = data ?? nil;
-        self.status = status
-        self.message = message
-    }
-}
-
-struct RestFullApi<T: Codable>: Codable {
-    let results: T
-}
-
-typealias CompleteHandleJSONCode<T> = (_ data: NetworkReponse<T>) -> Void
-typealias Users = [UserModel]
-
-struct Empty: Codable {
-    
-}
-
-struct NetworkService {
-    static let shared = NetworkService()
-    
-    private func request<T: Codable>(_ url: String,
-                                     respType: T.Type = Empty.self,
-                                     method: HTTPMethod = .get,
-                                     parameters: [String:Any]? = nil,
-                                     header: [String: String]? = nil,
-                                     _ complete: @escaping CompleteHandleJSONCode<T>) -> Void {
-        
-        AF.request(url, method: method, parameters: parameters, encoding: URLEncoding.default , interceptor: .retryPolicy)
-            .response { response in
-                switch response.result {
-                case .success(let data):
-                    do {
-                        let result = try JSONDecoder().decode(RestFullApi<T>.self, from: data!)
-                        complete(NetworkReponse<T>(data: result.results))
-                        
-                    } catch {
-                        complete(NetworkReponse(status: false, message: "Error parsing JSON: \(error)"))
-                        print("Error parsing JSON: \(error)")
+class NetworkService {
+    static func performApiNetworkCall<T: Codable>(route: API, type: T.Type) -> Observable<T> {
+        return Observable.create { observer in
+            NetworkManager.shared.getAPIProvider(type: API.self).request(route) { result in
+                switch result {
+                case .success(let response):
+                    if response.statusCode == HttpStatusCode.OK.rawValue {
+                        do {
+                            let object = try JSONDecoder().decode(T.self, from: response.data)
+                            observer.onNext(object)
+                            observer.onCompleted()
+                        } catch (let error) {
+                            observer.onError(BaseError(code: response.statusCode, message: error.localizedDescription))
+                        }
                     }
                 case .failure(let error):
-                    complete(NetworkReponse(status: false, message: "Api call failed: \(error)"))
-                    
-                    print(error)
+                    debugPrint(error)
+                    observer.onError(BaseError(code: -1, message: error.localizedDescription))
                 }
             }
-    }
-    
-    func makeGet(url: String) {
-        request(url) { data in
-            if data.status {
-                dump(data)
-                print("Result")
-            }
+            
+            return Disposables.create()
         }
     }
-    
 }

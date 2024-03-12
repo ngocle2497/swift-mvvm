@@ -42,6 +42,8 @@
 		127061062B99650B0099ACE6 /* UIViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */; };
 		127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061072B9977630099ACE6 /* Color+Utilities.swift */; };
 		1270610A2B99C5D10099ACE6 /* Button+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061092B99C5D10099ACE6 /* Button+Utilities.swift */; };
+		84927B862BA0A83A00C046AA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84927B852BA0A83A00C046AA /* NetworkManager.swift */; };
+		84927B882BA0AA3B00C046AA /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84927B872BA0AA3B00C046AA /* HttpStatusCode.swift */; };
 		D6A305DB1BDF0AF1C1588471 /* Pods_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52626BDC460AF764F16C05F0 /* Pods_MVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		6B9E5DA0A70CE0C521F13330 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		7E522B2198A4EFC18AFDF704 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		846B65162BA07D4F00BD334C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84927B852BA0A83A00C046AA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84927B872BA0AA3B00C046AA /* HttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpStatusCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				122A45E22B981C92001691BD /* ApiConstant.swift */,
+				84927B852BA0A83A00C046AA /* NetworkManager.swift */,
 				122A45E42B981D11001691BD /* NetworkService.swift */,
+				84927B872BA0AA3B00C046AA /* HttpStatusCode.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				127061062B99650B0099ACE6 /* UIViewController+Utilities.swift in Sources */,
 				127060FB2B9960BB0099ACE6 /* SplashViewController.swift in Sources */,
 				122A45C82B9817EC001691BD /* AppDelegate.swift in Sources */,
+				84927B882BA0AA3B00C046AA /* HttpStatusCode.swift in Sources */,
 				12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */,
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
@@ -489,6 +496,7 @@
 				122A45E12B981B9C001691BD /* UserModel.swift in Sources */,
 				126B18DF2B9EA23300B727D2 /* Global.swift in Sources */,
 				122A45E32B981C92001691BD /* ApiConstant.swift in Sources */,
+				84927B862BA0A83A00C046AA /* NetworkManager.swift in Sources */,
 				127060F12B9959B50099ACE6 /* LoginParam.swift in Sources */,
 				127060F32B995B360099ACE6 /* PaginationParam.swift in Sources */,
 				126B18E62B9EC3B200B727D2 /* Configuration.swift in Sources */,

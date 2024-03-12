@@ -1,40 +1,57 @@
 import Foundation
+import Moya
 
-enum ApiContant {
-    case login(LoginParam)
-    case register
-    case getUsers(GetUserParam)
+enum API {
+    case login
+    case putFile
 }
 
-extension ApiContant {
-    public var serverUrl: String {
-        get {
-            return "https://randomuser.me/api"
+extension API: TargetType {
+    var baseURL: URL {
+        switch self {
+        case .login:
+            return URL(string: "https://domain.base.api")!
+        case .putFile:
+            return URL(string: "https://domain.file.api")!
         }
     }
-    private var path: String {
+    
+    var path: String {
         switch self {
         case .login:
             return "/login"
-        case .register:
-            return "/register"
-        case .getUsers:
-            return "/users"
+        case .putFile:
+            return "/file"
         }
     }
     
-    private var params: [String: Any] {
+    var method: Moya.Method {
         switch self {
-        case let .login(params):
-            return ["userName": params.userName, "password": params.password]
-        case .register:
-            return [:]
-        case let .getUsers(params):
-            return ["roomId": params.roomId, "pageIndex": params.pageIndex, "pageSize": params.pageSize]
+        default:
+                .get
         }
     }
     
-    var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+    var task: Moya.Task {
+        var parameters: [String: Any] = [:]
+        var encoding: ParameterEncoding = URLEncoding.queryString
+        switch self {
+        case .login:
+            return .requestParameters(parameters: parameters, encoding: encoding)
+        case .putFile:
+            return .requestParameters(parameters: parameters, encoding: encoding)
+        }
     }
+    
+    var headers: [String : String]? {
+        let defaultHeaders: [String: String] = ["Content-Type": "application/json"]
+        switch self {
+        case .login:
+            return  defaultHeaders
+        case .putFile:
+            return ["Content-Type": "multipart/form-data"]
+        }
+    }
+    
+    
 }
