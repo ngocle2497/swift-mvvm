@@ -1,6 +1,16 @@
 import Foundation
 import CryptoSwift
 
+
+func localized(_ key: String, _ table: String, _ value: String) -> String {
+    if let path = Bundle.main.path(forResource: LocalStorage.shared.appLanguage!.rawValue, ofType: "lproj"), let bundle = Bundle(path: path) {
+        return NSLocalizedString(key, bundle: bundle, comment: value)
+    }
+    
+    return value
+}
+
+
 extension String {
     func toDic() -> [String: Any]? {
         if let data = self.data(using: .utf8) {

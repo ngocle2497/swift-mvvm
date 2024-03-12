@@ -1,5 +1,5 @@
 /* Title for an alert */
-"alert_title" = "Judul peringatan";
+"alert_title" = "Title of the alert";
 "alert_message" = "Some alert body there";
 /* A comment with no space above it */
-"bananas.owner" = "%d pisang itu milik %@.";
+"bananas.owner" = "Có %d quả chuối thuộc về %@.";

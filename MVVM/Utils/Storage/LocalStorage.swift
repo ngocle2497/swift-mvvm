@@ -1,10 +1,3 @@
-//
-//  LocalStorage.swift
-//  MVVM
-//
-//  Created by Ngoc H. Le on 11/03/2024.
-//
-
 import Foundation
 import MMKV
 
@@ -28,13 +21,13 @@ struct LocalStorage {
     
     var appTheme: ColorTheme? {
         get {
-            guard let theme =  instance?.string(forKey: "appTheme") else {
+            guard let raw =  instance?.string(forKey: "appTheme") else {
                 return .dark
             }
-            guard let themeKey = ColorTheme(rawValue: theme) else {
+            guard let value = ColorTheme(rawValue: raw) else {
                 return .dark
             }
-            return themeKey
+            return value
         }
         set {
             if let value = newValue {
@@ -47,19 +40,38 @@ struct LocalStorage {
     
     var appFont: FontSize? {
         get {
-            guard let font =  instance?.string(forKey: "appFont") else {
+            guard let raw =  instance?.string(forKey: "appFont") else {
                 return .default
             }
-            guard let fontKey = FontSize(rawValue: font) else {
-                return .large
+            guard let value = FontSize(rawValue: raw) else {
+                return .default
             }
-            return fontKey
+            return value
         }
         set {
             if let value = newValue {
                 instance?.set(value.rawValue, forKey: "appFont")
             } else {
                 instance?.removeValue(forKey: "appFont")
+            }
+        }
+    }
+    
+    var appLanguage: Language? {
+        get {
+            guard let raw =  instance?.string(forKey: "appLanguage") else {
+                return .english
+            }
+            guard let value = Language(rawValue: raw) else {
+                return .english
+            }
+            return value
+        }
+        set {
+            if let value = newValue {
+                instance?.set(value.rawValue, forKey: "appLanguage")
+            } else {
+                instance?.removeValue(forKey: "appLanguage")
             }
         }
     }

@@ -2,8 +2,8 @@ import Foundation
 import Combine
 
 enum Language: String {
-    case english = "English"
-    case vietnam = "VietNam"
+    case english = "en"
+    case vietnam = "vi"
 }
 
 enum ColorTheme: String {
@@ -18,13 +18,23 @@ enum FontSize: String {
 
 
 class AppSettings: ObservableObject {
-    @Published var language: Language = .english
+    @Published private var _language: Language = LocalStorage.shared.appLanguage!
     @Published private var _theme: ColorTheme = LocalStorage.shared.appTheme!
     @Published private var _fontSize: FontSize = LocalStorage.shared.appFont!
-
-     init() {
+    
+    init() {
         ThemeManager.updateFont(_fontSize)
         ThemeManager.updateTheme(_theme)
+    }
+    
+    var language: Language {
+        get {
+            return _language
+        }
+        set {
+            LocalStorage.shared.appLanguage = newValue
+            _language = newValue
+        }
     }
     
     var theme: ColorTheme {

@@ -1,15 +1,8 @@
 strings:
-  inputs: MVVM/Resources/Localizable/en.lproj
+  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Localizable/en.lproj
   outputs:
     - templateName: structured-swift5
-      output: MVVM/Resources/Localizable/Generated/Strings.swift
+      output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Localizable/Generated/Strings.swift
       params:
-        enumName: S
-# xcassets:
-#   inputs:
-#     - Resources/Images.xcassets
-#     - Resources/MoreImages.xcassets
-#     - Resources/Colors.xcassets
-#   outputs:
-#     - templateName: swift5
-#       output: Generated/Assets.swift
+        enumName: S10n
+        lookupFunction: localized

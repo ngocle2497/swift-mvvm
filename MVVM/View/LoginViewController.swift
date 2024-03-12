@@ -16,7 +16,7 @@ class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating 
     
     func globalUpdate() {
         print("Login View Updating: \(appSetting.language)")
-        lbterm.text = S.Bananas.owner(12, "MasonLe")
+        lbterm.text = S10n.Bananas.owner(12, "Ngọc Lê")
         lbterm.textColor = .primary
         lbterm.font = .heading1
     }
