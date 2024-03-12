@@ -1,0 +1,5 @@
+/* Title for an alert */
+"alert_title" = "Judul peringatan";
+"alert_message" = "Some alert body there";
+/* A comment with no space above it */
+"bananas.owner" = "%d pisang itu milik %@.";

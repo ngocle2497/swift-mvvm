@@ -6,10 +6,11 @@ target 'MVVM' do
   use_frameworks!
 
   # Pods for MVVM
-  pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'MMKV'
   pod 'CryptoSwift'
+  pod 'Moya'
+  pod 'SwiftGen'
 
 end

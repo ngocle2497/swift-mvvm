@@ -12,6 +12,9 @@
 		12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */; };
 		12221A692BA0087500DD9FCB /* PoppinsLatin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A662BA0087500DD9FCB /* PoppinsLatin-Regular.ttf */; };
 		12221A6B2BA00D8600DD9FCB /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12221A6A2BA00D8600DD9FCB /* UIFont+Utilities.swift */; };
+		12221A722BA0439D00DD9FCB /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 12221A712BA0439D00DD9FCB /* swiftgen.yml */; };
+		12221A762BA0461E00DD9FCB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12221A782BA0461E00DD9FCB /* Localizable.strings */; };
+		12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12221A7B2BA0468400DD9FCB /* Strings.swift */; };
 		122A45C82B9817EC001691BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45C72B9817EC001691BD /* AppDelegate.swift */; };
 		122A45D12B9817ED001691BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122A45D02B9817ED001691BD /* Assets.xcassets */; };
 		122A45D42B9817ED001691BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122A45D22B9817ED001691BD /* LaunchScreen.storyboard */; };
@@ -48,6 +51,10 @@
 		12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
 		12221A662BA0087500DD9FCB /* PoppinsLatin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Regular.ttf"; sourceTree = "<group>"; };
 		12221A6A2BA00D8600DD9FCB /* UIFont+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utilities.swift"; sourceTree = "<group>"; };
+		12221A712BA0439D00DD9FCB /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		12221A772BA0461E00DD9FCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		12221A792BA0463500DD9FCB /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		12221A7B2BA0468400DD9FCB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		122A45C42B9817EC001691BD /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A45C72B9817EC001691BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		122A45D02B9817ED001691BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +129,7 @@
 		12221A622BA0084F00DD9FCB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12221A732BA045E400DD9FCB /* Localizable */,
 				12221A632BA0085600DD9FCB /* Fonts */,
 			);
 			path = Resources;
@@ -137,9 +145,27 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		12221A732BA045E400DD9FCB /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				12221A7A2BA0467C00DD9FCB /* Generated */,
+				12221A782BA0461E00DD9FCB /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		12221A7A2BA0467C00DD9FCB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				12221A7B2BA0468400DD9FCB /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		122A45BB2B9817EC001691BD = {
 			isa = PBXGroup;
 			children = (
+				12221A712BA0439D00DD9FCB /* swiftgen.yml */,
 				122A45C62B9817EC001691BD /* MVVM */,
 				122A45C52B9817EC001691BD /* Products */,
 				4A001E1D376410D6663CE0CE /* Pods */,
@@ -312,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 122A45D82B9817ED001691BD /* Build configuration list for PBXNativeTarget "MVVM" */;
 			buildPhases = (
+				12221A6E2BA0429C00DD9FCB /* SwiftGen */,
 				BED6764EB40D08743DE811B8 /* [CP] Check Pods Manifest.lock */,
 				122A45C02B9817EC001691BD /* Sources */,
 				122A45C12B9817EC001691BD /* Frameworks */,
@@ -349,6 +376,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-IN",
 			);
 			mainGroup = 122A45BB2B9817EC001691BD;
 			productRefGroup = 122A45C52B9817EC001691BD /* Products */;
@@ -370,15 +398,35 @@
 				12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */,
 				12221A672BA0087500DD9FCB /* PoppinsLatin-Bold.ttf in Resources */,
 				12221A692BA0087500DD9FCB /* PoppinsLatin-Regular.ttf in Resources */,
+				12221A762BA0461E00DD9FCB /* Localizable.strings in Resources */,
 				123FA0A02B9AF18E004B1197 /* HomeViewController.xib in Resources */,
 				122A45D12B9817ED001691BD /* Assets.xcassets in Resources */,
 				127060FC2B9960BB0099ACE6 /* SplashViewController.xib in Resources */,
+				12221A722BA0439D00DD9FCB /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12221A6E2BA0429C00DD9FCB /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" …\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
 		6C7F2F444FB378207878E9CF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +480,7 @@
 				127061062B99650B0099ACE6 /* UIViewController+Utilities.swift in Sources */,
 				127060FB2B9960BB0099ACE6 /* SplashViewController.swift in Sources */,
 				122A45C82B9817EC001691BD /* AppDelegate.swift in Sources */,
+				12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */,
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
 				126B18F12B9F12FF00B727D2 /* LightColorTheme.swift in Sources */,
@@ -455,6 +504,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		12221A782BA0461E00DD9FCB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12221A772BA0461E00DD9FCB /* en */,
+				12221A792BA0463500DD9FCB /* en-IN */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		122A45D22B9817ED001691BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -470,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -530,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

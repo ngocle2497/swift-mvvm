@@ -25,8 +25,9 @@ class Environment {
 }
 
 protocol GlobalUpdating {
-    func update()
+    func globalUpdate()
 }
+
 
 extension GlobalUpdating {
     func registerUpdates() {
@@ -34,12 +35,12 @@ extension GlobalUpdating {
         for child in  mirror.children {
             if let result = child.value as? AnyGlobal {
                 NotificationCenter.default.addObserver(forName: Environment.updateChanged, object: result.anyWrappedValue, queue: .main) { _ in
-                    self.update()
+                    self.globalUpdate()
                 }
             }
         }
         
-        update()
+        globalUpdate()
     }
 }
 

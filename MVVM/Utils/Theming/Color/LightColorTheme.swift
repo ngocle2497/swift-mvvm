@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 struct LightColorTheme: ColorProtocol {
-    let primary: UIColor = UIColor(hex: "57E1F1")
+    let primary: UIColor = UIColor(hex: "471F97")
     
     let primaryFocus: UIColor  = UIColor(hex: "3CDCEE")
     
