@@ -1,10 +1,11 @@
 import Foundation
 import Combine
 
-class AppSettings: ObservableObject {
-    @Published var language = "English"
+enum Language: String {
+    case english = "English"
+    case vietnam = "VietNam"
 }
 
-class UserSettings: ObservableObject {
-    @Published var isAuthenticated = false
+class AppSettings: ObservableObject {
+    @Published var language: Language = .english
 }

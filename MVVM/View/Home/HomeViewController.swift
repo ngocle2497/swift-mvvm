@@ -1,8 +1,7 @@
 import UIKit
 
-class HomeViewController: UIViewController,UIGestureRecognizerDelegate, GlobalUpdating {
+class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
-    @Global var userSettings: UserSettings
     
     var collectionView: UICollectionView?
     let cellID = "CELL_ID"
@@ -13,8 +12,6 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate, GlobalUp
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerUpdates()
-        
     
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
         collectionView?.translatesAutoresizingMaskIntoConstraints = false;
@@ -48,27 +45,6 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate, GlobalUp
     }
     
     @objc func onLongPress(_ gesture: UILongPressGestureRecognizer) {
-        userSettings.isAuthenticated.toggle();
-//        guard let collectionView = collectionView else {
-//            return
-//        }
-//        switch gesture.state {
-//        case .began:
-//            guard let indexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
-//                return
-//            }
-//            longPressedEnabled = true
-//            collectionView.beginInteractiveMovementForItem(at: indexPath)
-//        case .changed:
-//            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
-//
-//        case .ended:
-//            longPressedEnabled = false
-//            collectionView.endInteractiveMovement()
-//        default:
-//            collectionView.cancelInteractiveMovement()
-//            longPressedEnabled = false
-//        }
     }
     
 }

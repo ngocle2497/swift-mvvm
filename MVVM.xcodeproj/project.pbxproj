@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12221A612BA007BD00DD9FCB /* DefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12221A602BA007BD00DD9FCB /* DefaultFont.swift */; };
+		12221A672BA0087500DD9FCB /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A642BA0087500DD9FCB /* PoppinsLatin-Bold.ttf */; };
+		12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */; };
+		12221A692BA0087500DD9FCB /* PoppinsLatin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A662BA0087500DD9FCB /* PoppinsLatin-Regular.ttf */; };
+		12221A6B2BA00D8600DD9FCB /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12221A6A2BA00D8600DD9FCB /* UIFont+Utilities.swift */; };
 		122A45C82B9817EC001691BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45C72B9817EC001691BD /* AppDelegate.swift */; };
 		122A45D12B9817ED001691BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122A45D02B9817ED001691BD /* Assets.xcassets */; };
 		122A45D42B9817ED001691BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122A45D22B9817ED001691BD /* LaunchScreen.storyboard */; };
@@ -21,7 +26,6 @@
 		126B18E62B9EC3B200B727D2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18E52B9EC3B200B727D2 /* Configuration.swift */; };
 		126B18E82B9EDDAD00B727D2 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18E72B9EDDAD00B727D2 /* String+Utilities.swift */; };
 		126B18EB2B9EFE5100B727D2 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18EA2B9EFE5100B727D2 /* ThemeManager.swift */; };
-		126B18ED2B9F0E2600B727D2 /* Dictionary+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18EC2B9F0E2600B727D2 /* Dictionary+Utilities.swift */; };
 		126B18EF2B9F12BE00B727D2 /* DarkColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18EE2B9F12BE00B727D2 /* DarkColorTheme.swift */; };
 		126B18F12B9F12FF00B727D2 /* LightColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18F02B9F12FF00B727D2 /* LightColorTheme.swift */; };
 		127060F12B9959B50099ACE6 /* LoginParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127060F02B9959B50099ACE6 /* LoginParam.swift */; };
@@ -39,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12221A602BA007BD00DD9FCB /* DefaultFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFont.swift; sourceTree = "<group>"; };
+		12221A642BA0087500DD9FCB /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
+		12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
+		12221A662BA0087500DD9FCB /* PoppinsLatin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Regular.ttf"; sourceTree = "<group>"; };
+		12221A6A2BA00D8600DD9FCB /* UIFont+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utilities.swift"; sourceTree = "<group>"; };
 		122A45C42B9817EC001691BD /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A45C72B9817EC001691BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		122A45D02B9817ED001691BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,7 +64,6 @@
 		126B18E52B9EC3B200B727D2 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		126B18E72B9EDDAD00B727D2 /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		126B18EA2B9EFE5100B727D2 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		126B18EC2B9F0E2600B727D2 /* Dictionary+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utilities.swift"; sourceTree = "<group>"; };
 		126B18EE2B9F12BE00B727D2 /* DarkColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkColorTheme.swift; sourceTree = "<group>"; };
 		126B18F02B9F12FF00B727D2 /* LightColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightColorTheme.swift; sourceTree = "<group>"; };
 		127060F02B9959B50099ACE6 /* LoginParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginParam.swift; sourceTree = "<group>"; };
@@ -94,6 +102,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		12221A5E2BA0077300DD9FCB /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				126B18F02B9F12FF00B727D2 /* LightColorTheme.swift */,
+				126B18EE2B9F12BE00B727D2 /* DarkColorTheme.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		12221A5F2BA0078300DD9FCB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				12221A602BA007BD00DD9FCB /* DefaultFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		12221A622BA0084F00DD9FCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12221A632BA0085600DD9FCB /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12221A632BA0085600DD9FCB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				12221A642BA0087500DD9FCB /* PoppinsLatin-Bold.ttf */,
+				12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */,
+				12221A662BA0087500DD9FCB /* PoppinsLatin-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		122A45BB2B9817EC001691BD = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +158,7 @@
 		122A45C62B9817EC001691BD /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				12221A622BA0084F00DD9FCB /* Resources */,
 				126B18DC2B9EA21600B727D2 /* Utils */,
 				122A45DF2B981828001691BD /* Networking */,
 				122A45DE2B98181B001691BD /* Extensions */,
@@ -155,7 +199,7 @@
 				127061072B9977630099ACE6 /* Color+Utilities.swift */,
 				127061092B99C5D10099ACE6 /* Button+Utilities.swift */,
 				126B18E72B9EDDAD00B727D2 /* String+Utilities.swift */,
-				126B18EC2B9F0E2600B727D2 /* Dictionary+Utilities.swift */,
+				12221A6A2BA00D8600DD9FCB /* UIFont+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,9 +253,9 @@
 		126B18E92B9EFE3300B727D2 /* Theming */ = {
 			isa = PBXGroup;
 			children = (
+				12221A5F2BA0078300DD9FCB /* Font */,
+				12221A5E2BA0077300DD9FCB /* Color */,
 				126B18EA2B9EFE5100B727D2 /* ThemeManager.swift */,
-				126B18F02B9F12FF00B727D2 /* LightColorTheme.swift */,
-				126B18EE2B9F12BE00B727D2 /* DarkColorTheme.swift */,
 			);
 			path = Theming;
 			sourceTree = "<group>";
@@ -323,6 +367,9 @@
 			files = (
 				127061022B99638B0099ACE6 /* LoginViewController.xib in Resources */,
 				122A45D42B9817ED001691BD /* LaunchScreen.storyboard in Resources */,
+				12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */,
+				12221A672BA0087500DD9FCB /* PoppinsLatin-Bold.ttf in Resources */,
+				12221A692BA0087500DD9FCB /* PoppinsLatin-Regular.ttf in Resources */,
 				123FA0A02B9AF18E004B1197 /* HomeViewController.xib in Resources */,
 				122A45D12B9817ED001691BD /* Assets.xcassets in Resources */,
 				127060FC2B9960BB0099ACE6 /* SplashViewController.xib in Resources */,
@@ -378,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12221A612BA007BD00DD9FCB /* DefaultFont.swift in Sources */,
 				126B18E82B9EDDAD00B727D2 /* String+Utilities.swift in Sources */,
 				126B18EF2B9F12BE00B727D2 /* DarkColorTheme.swift in Sources */,
 				127060F62B995BA60099ACE6 /* GetUserParam.swift in Sources */,
@@ -387,12 +435,12 @@
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
 				126B18F12B9F12FF00B727D2 /* LightColorTheme.swift in Sources */,
+				12221A6B2BA00D8600DD9FCB /* UIFont+Utilities.swift in Sources */,
 				127061042B9964E80099ACE6 /* SplashViewModel.swift in Sources */,
 				122A45E12B981B9C001691BD /* UserModel.swift in Sources */,
 				126B18DF2B9EA23300B727D2 /* Global.swift in Sources */,
 				122A45E32B981C92001691BD /* ApiConstant.swift in Sources */,
 				127060F12B9959B50099ACE6 /* LoginParam.swift in Sources */,
-				126B18ED2B9F0E2600B727D2 /* Dictionary+Utilities.swift in Sources */,
 				127060F32B995B360099ACE6 /* PaginationParam.swift in Sources */,
 				126B18E62B9EC3B200B727D2 /* Configuration.swift in Sources */,
 				126B18E42B9EB20A00B727D2 /* LocalStorage.swift in Sources */,
