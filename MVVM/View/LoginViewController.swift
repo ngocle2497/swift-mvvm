@@ -4,6 +4,7 @@ class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating 
 
     @Global var appSetting: AppSettings
     
+    @IBOutlet weak var remoteImage: BRemoteImage!
     @IBOutlet weak var lbterm: UITextView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var inputEmail: UITextField!
@@ -18,11 +19,11 @@ class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating 
         print("Login View Updating: \(appSetting.language)")
         lbterm.text = S10n.Bananas.owner(12, "Ngọc Lê")
         lbterm.textColor = .primary
-        lbterm.font = .heading1
+        lbterm.font = .title1Bold
     }
     func setupView(){
         loginButton.layer.cornerRadius = 20
-        
+        remoteImage.thumbhash = "3PcNNYSFeXh/k0oGLQaSVsN0BVhn2oq2Z5SQUQcZ"
     }
     
     @IBAction func onLoginPressed(_ sender: Any) {

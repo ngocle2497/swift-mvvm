@@ -14,6 +14,9 @@ PODS:
   - RxRelay (6.6.0):
     - RxSwift (= 6.6.0)
   - RxSwift (6.6.0)
+  - SDWebImage (5.18.11):
+    - SDWebImage/Core (= 5.18.11)
+  - SDWebImage/Core (5.18.11)
   - SwiftGen (6.6.3)
 
 DEPENDENCIES:
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - Moya
   - RxCocoa
   - RxSwift
+  - SDWebImage
   - SwiftGen
 
 SPEC REPOS:
@@ -34,6 +38,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SDWebImage
     - SwiftGen
 
 SPEC CHECKSUMS:
@@ -45,8 +50,9 @@ SPEC CHECKSUMS:
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  SDWebImage: a3ba0b8faac7228c3c8eadd1a55c9c9fe5e16457
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
 
-PODFILE CHECKSUM: 7dd396a934e65d068a79b57cec343d8d8e5a3d45
+PODFILE CHECKSUM: 40cd19fcf6857962d0b63c9bf7ed3ba23b09e6d0
 
 COCOAPODS: 1.14.3

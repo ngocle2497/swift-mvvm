@@ -21,6 +21,12 @@
 		122A45E12B981B9C001691BD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45E02B981B9C001691BD /* UserModel.swift */; };
 		122A45E32B981C92001691BD /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45E22B981C92001691BD /* ApiConstant.swift */; };
 		122A45E52B981D11001691BD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45E42B981D11001691BD /* NetworkService.swift */; };
+		122AD82A2BA15B5B00F6660C /* BRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122AD8292BA15B5B00F6660C /* BRemoteImage.swift */; };
+		122AD82D2BA15BF300F6660C /* BView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122AD82C2BA15BF300F6660C /* BView.swift */; };
+		122AD82F2BA163DA00F6660C /* ContenFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122AD82E2BA163DA00F6660C /* ContenFit.swift */; };
+		122AD8312BA1650000F6660C /* ImageCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122AD8302BA1650000F6660C /* ImageCachePolicy.swift */; };
+		122AD8332BA1684C00F6660C /* ThumbhashLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122AD8322BA1684C00F6660C /* ThumbhashLoader.swift */; };
+		122AD8352BA1872F00F6660C /* Thumbhash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122AD8342BA1872F00F6660C /* Thumbhash.swift */; };
 		123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FA09D2B9AF18E004B1197 /* HomeViewController.swift */; };
 		123FA0A02B9AF18E004B1197 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 123FA09E2B9AF18E004B1197 /* HomeViewController.xib */; };
 		126B18DF2B9EA23300B727D2 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B18DE2B9EA23300B727D2 /* Global.swift */; };
@@ -64,6 +70,12 @@
 		122A45E02B981B9C001691BD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		122A45E22B981C92001691BD /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
 		122A45E42B981D11001691BD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		122AD8292BA15B5B00F6660C /* BRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRemoteImage.swift; sourceTree = "<group>"; };
+		122AD82C2BA15BF300F6660C /* BView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BView.swift; sourceTree = "<group>"; };
+		122AD82E2BA163DA00F6660C /* ContenFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContenFit.swift; sourceTree = "<group>"; };
+		122AD8302BA1650000F6660C /* ImageCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCachePolicy.swift; sourceTree = "<group>"; };
+		122AD8322BA1684C00F6660C /* ThumbhashLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbhashLoader.swift; sourceTree = "<group>"; };
+		122AD8342BA1872F00F6660C /* Thumbhash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbhash.swift; sourceTree = "<group>"; };
 		123FA09D2B9AF18E004B1197 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		123FA09E2B9AF18E004B1197 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		126B18DE2B9EA23300B727D2 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -188,6 +200,7 @@
 		122A45C62B9817EC001691BD /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				122AD8272BA15B3B00F6660C /* CustomViews */,
 				12221A622BA0084F00DD9FCB /* Resources */,
 				126B18DC2B9EA21600B727D2 /* Utils */,
 				122A45DF2B981828001691BD /* Networking */,
@@ -243,6 +256,35 @@
 				84927B872BA0AA3B00C046AA /* HttpStatusCode.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		122AD8272BA15B3B00F6660C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				122AD82B2BA15BEA00F6660C /* BView */,
+				122AD8282BA15B4700F6660C /* RemoteImage */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		122AD8282BA15B4700F6660C /* RemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				122AD8292BA15B5B00F6660C /* BRemoteImage.swift */,
+				122AD8322BA1684C00F6660C /* ThumbhashLoader.swift */,
+				122AD8342BA1872F00F6660C /* Thumbhash.swift */,
+				122AD8302BA1650000F6660C /* ImageCachePolicy.swift */,
+				122AD82E2BA163DA00F6660C /* ContenFit.swift */,
+			);
+			path = RemoteImage;
+			sourceTree = "<group>";
+		};
+		122AD82B2BA15BEA00F6660C /* BView */ = {
+			isa = PBXGroup;
+			children = (
+				122AD82C2BA15BF300F6660C /* BView.swift */,
+			);
+			path = BView;
 			sourceTree = "<group>";
 		};
 		123FA09C2B9AF182004B1197 /* Home */ = {
@@ -344,8 +386,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 122A45D82B9817ED001691BD /* Build configuration list for PBXNativeTarget "MVVM" */;
 			buildPhases = (
-				12221A6E2BA0429C00DD9FCB /* SwiftGen */,
 				BED6764EB40D08743DE811B8 /* [CP] Check Pods Manifest.lock */,
+				12221A6E2BA0429C00DD9FCB /* SwiftGen */,
 				122A45C02B9817EC001691BD /* Sources */,
 				122A45C12B9817EC001691BD /* Frameworks */,
 				122A45C22B9817EC001691BD /* Resources */,
@@ -488,7 +530,10 @@
 				122A45C82B9817EC001691BD /* AppDelegate.swift in Sources */,
 				84927B882BA0AA3B00C046AA /* HttpStatusCode.swift in Sources */,
 				12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */,
+				122AD8312BA1650000F6660C /* ImageCachePolicy.swift in Sources */,
+				122AD8352BA1872F00F6660C /* Thumbhash.swift in Sources */,
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
+				122AD8332BA1684C00F6660C /* ThumbhashLoader.swift in Sources */,
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
 				126B18F12B9F12FF00B727D2 /* LightColorTheme.swift in Sources */,
 				12221A6B2BA00D8600DD9FCB /* UIFont+Utilities.swift in Sources */,
@@ -497,12 +542,15 @@
 				126B18DF2B9EA23300B727D2 /* Global.swift in Sources */,
 				122A45E32B981C92001691BD /* ApiConstant.swift in Sources */,
 				84927B862BA0A83A00C046AA /* NetworkManager.swift in Sources */,
+				122AD82D2BA15BF300F6660C /* BView.swift in Sources */,
+				122AD82A2BA15B5B00F6660C /* BRemoteImage.swift in Sources */,
 				127060F12B9959B50099ACE6 /* LoginParam.swift in Sources */,
 				127060F32B995B360099ACE6 /* PaginationParam.swift in Sources */,
 				126B18E62B9EC3B200B727D2 /* Configuration.swift in Sources */,
 				126B18E42B9EB20A00B727D2 /* LocalStorage.swift in Sources */,
 				1270610A2B99C5D10099ACE6 /* Button+Utilities.swift in Sources */,
 				122A45E52B981D11001691BD /* NetworkService.swift in Sources */,
+				122AD82F2BA163DA00F6660C /* ContenFit.swift in Sources */,
 				126B18E12B9EA36800B727D2 /* AppSettings.swift in Sources */,
 				126B18EB2B9EFE5100B727D2 /* ThemeManager.swift in Sources */,
 				127061012B99638B0099ACE6 /* LoginViewController.swift in Sources */,

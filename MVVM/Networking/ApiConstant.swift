@@ -28,7 +28,7 @@ extension API: TargetType {
     var method: Moya.Method {
         switch self {
         default:
-                .get
+            return .get
         }
     }
     

@@ -12,5 +12,6 @@ target 'MVVM' do
   pod 'CryptoSwift'
   pod 'Moya'
   pod 'SwiftGen'
+  pod 'SDWebImage'
 
 end
