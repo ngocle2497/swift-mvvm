@@ -48,6 +48,9 @@
 		127061062B99650B0099ACE6 /* UIViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */; };
 		127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061072B9977630099ACE6 /* Color+Utilities.swift */; };
 		1270610A2B99C5D10099ACE6 /* Button+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061092B99C5D10099ACE6 /* Button+Utilities.swift */; };
+		12F23B102BA2A00A002393CE /* Blurhash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F23B0F2BA2A00A002393CE /* Blurhash.swift */; };
+		12F23B122BA2A017002393CE /* BlurhashLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F23B112BA2A017002393CE /* BlurhashLoader.swift */; };
+		12F23B142BA2B806002393CE /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F23B132BA2B806002393CE /* ImageTransition.swift */; };
 		84927B862BA0A83A00C046AA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84927B852BA0A83A00C046AA /* NetworkManager.swift */; };
 		84927B882BA0AA3B00C046AA /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84927B872BA0AA3B00C046AA /* HttpStatusCode.swift */; };
 		D6A305DB1BDF0AF1C1588471 /* Pods_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52626BDC460AF764F16C05F0 /* Pods_MVVM.framework */; };
@@ -97,6 +100,11 @@
 		127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utilities.swift"; sourceTree = "<group>"; };
 		127061072B9977630099ACE6 /* Color+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utilities.swift"; sourceTree = "<group>"; };
 		127061092B99C5D10099ACE6 /* Button+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Utilities.swift"; sourceTree = "<group>"; };
+		12F23B0F2BA2A00A002393CE /* Blurhash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blurhash.swift; sourceTree = "<group>"; };
+		12F23B112BA2A017002393CE /* BlurhashLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurhashLoader.swift; sourceTree = "<group>"; };
+		12F23B132BA2B806002393CE /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
+		12F23B4F2BA2D050002393CE /* MVVM copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MVVM copy-Info.plist"; path = "/Users/ngoc.le/Desktop/MVVM/MVVM copy-Info.plist"; sourceTree = "<absolute>"; };
+		12F23B8A2BA2D0AA002393CE /* MVVM copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MVVM copy2-Info.plist"; path = "/Users/ngoc.le/Desktop/MVVM/MVVM copy2-Info.plist"; sourceTree = "<absolute>"; };
 		52626BDC460AF764F16C05F0 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9E5DA0A70CE0C521F13330 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		7E522B2198A4EFC18AFDF704 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +194,8 @@
 				122A45C52B9817EC001691BD /* Products */,
 				4A001E1D376410D6663CE0CE /* Pods */,
 				0E5C0EAEE013DC779323E831 /* Frameworks */,
+				12F23B4F2BA2D050002393CE /* MVVM copy-Info.plist */,
+				12F23B8A2BA2D0AA002393CE /* MVVM copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +285,9 @@
 				122AD8342BA1872F00F6660C /* Thumbhash.swift */,
 				122AD8302BA1650000F6660C /* ImageCachePolicy.swift */,
 				122AD82E2BA163DA00F6660C /* ContenFit.swift */,
+				12F23B112BA2A017002393CE /* BlurhashLoader.swift */,
+				12F23B0F2BA2A00A002393CE /* Blurhash.swift */,
+				12F23B132BA2B806002393CE /* ImageTransition.swift */,
 			);
 			path = RemoteImage;
 			sourceTree = "<group>";
@@ -531,8 +544,10 @@
 				84927B882BA0AA3B00C046AA /* HttpStatusCode.swift in Sources */,
 				12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */,
 				122AD8312BA1650000F6660C /* ImageCachePolicy.swift in Sources */,
+				12F23B142BA2B806002393CE /* ImageTransition.swift in Sources */,
 				122AD8352BA1872F00F6660C /* Thumbhash.swift in Sources */,
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
+				12F23B122BA2A017002393CE /* BlurhashLoader.swift in Sources */,
 				122AD8332BA1684C00F6660C /* ThumbhashLoader.swift in Sources */,
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
 				126B18F12B9F12FF00B727D2 /* LightColorTheme.swift in Sources */,
@@ -547,6 +562,7 @@
 				127060F12B9959B50099ACE6 /* LoginParam.swift in Sources */,
 				127060F32B995B360099ACE6 /* PaginationParam.swift in Sources */,
 				126B18E62B9EC3B200B727D2 /* Configuration.swift in Sources */,
+				12F23B102BA2A00A002393CE /* Blurhash.swift in Sources */,
 				126B18E42B9EB20A00B727D2 /* LocalStorage.swift in Sources */,
 				1270610A2B99C5D10099ACE6 /* Button+Utilities.swift in Sources */,
 				122A45E52B981D11001691BD /* NetworkService.swift in Sources */,

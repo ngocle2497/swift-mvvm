@@ -4,7 +4,6 @@ import SDWebImage
 class ThumbhashLoader: NSObject, SDImageLoader {
     func canRequestImage(for url: URL?) -> Bool {
         return url?.scheme == "thumbhash"
-        
     }
     
     func requestImage(with url: URL?, options: SDWebImageOptions = [], context: [SDWebImageContextOption : Any]?, progress progressBlock: SDImageLoaderProgressBlock?, completed completedBlock: SDImageLoaderCompletedBlock? = nil) -> SDWebImageOperation? {
@@ -12,6 +11,7 @@ class ThumbhashLoader: NSObject, SDImageLoader {
             completedBlock?(nil, nil, NSError(domain: "ThumHas", code: 0, userInfo: [NSLocalizedDescriptionKey: "URL provided to ThumbhashLoader is missing" ]), false)
             return nil
         }
+        // The URI looks like this: thumbhash:/3OcRJYB4d3h\iIeHeEh3eIhw+j2w
         var thumbhash = (url.pathComponents[1]).replacingOccurrences(of: "\\", with: "/")
         let remainder = thumbhash.count % 4
         if remainder > 0 {
@@ -35,6 +35,4 @@ class ThumbhashLoader: NSObject, SDImageLoader {
     func shouldBlockFailedURL(with url: URL, error: Error) -> Bool {
         return true
     }
-    
-    
 }

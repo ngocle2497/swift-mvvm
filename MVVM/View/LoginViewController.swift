@@ -1,7 +1,7 @@
 import UIKit
 import MMKV
 class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating {
-
+    
     @Global var appSetting: AppSettings
     
     @IBOutlet weak var remoteImage: BRemoteImage!
@@ -23,14 +23,20 @@ class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating 
     }
     func setupView(){
         loginButton.layer.cornerRadius = 20
-        remoteImage.thumbhash = "3PcNNYSFeXh/k0oGLQaSVsN0BVhn2oq2Z5SQUQcZ"
+        remoteImage.placeholderHash = .blurhash("LnGIZJS$bws._4f+kXof.9afkDWq")
+        
+        
+        remoteImage.source = "https://images.unsplash.com/photo-1682685797703-2bb22dbb885b?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
     
     @IBAction func onLoginPressed(_ sender: Any) {
+        remoteImage.placeholderHash = .thumbhash("IQgSLYZ6iHePh4h1eFeHh4dwgwg3")
         
-        appSetting.theme = appSetting.theme ==  .light ? .dark : .light
-        appSetting.fontSize = appSetting.fontSize ==  .default ? .large : .default
-        appSetting.language = appSetting.language == .english ? .vietnam : .english
-        print("ABC: \("9OutPkdUaQyRTeKppfgZurs5+DIcqiITl/lRz0hTfI9N98jF0dDdvKIodtez4BVlBm8a2Rzt/5zy0kxpU7pnuMLDH7onbLCrVkc71LMXPuNqODTAJiBXW5FZqiwR4kfayJrAEEWpOAZGq04ZEP4rESlfsQwn8CYgLjBYQpRiWOPBfHcpo8NV3g1ommyDfeSlDUPRdafqSmRIInZVMEv7KnOz9wIZAq/y37ahzaSeVm8GbxrZHO3/nPLSTGlTume4+pYVeLRtaskkqgQgSDTlyR9CsyrtvyKPMiszlYnHMRX8jDyLgwgUlhMYYKs3NRf5UdEGL5oUAW6X4OaSlZNDaG0Scl8ATn0YhGevEPL99aD9g4f9ngwGmxOgfUFL/3LCrlhxx7MhMKLctXa7UswTxugOm0X+2KGToSA8b85TOO5vUlX3MhEqc8qIhAC7tc5Tc9/MoEZzz1nrbFsvz8yRdGCocf8srVE/opvRJ/twAqTawDjC4qxlg+EkoPphJPBhvedQ7cWDVkhGcOesASDvo9zRCqJdv8EPglgg1xaKeCPJ8hpC88OqnQChOkESQC1ww8H4HNIc2ldAcUMTwKfJc31kutwegFAoUJO74XCPpGuHrQD+sIyDlY/c6Xwl6vP6I81vi5fZFxWNNFJfoRyXxQ==".aesDecrypt(password: "SecretPassphrase")?.toDic()?["bundle_id"] ?? "NO")")
+        remoteImage.source = "https://images.unsplash.com/photo-1710079224130-499906a208d8?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        //        remoteImage.reload()
+        //        appSetting.theme = appSetting.theme ==  .light ? .dark : .light
+        //        appSetting.fontSize = appSetting.fontSize ==  .default ? .large : .default
+        //        appSetting.language = appSetting.language == .english ? .vietnam : .english
+//        print("ABC: \("9OutPkdUaQyRTeKppfgZurs5+DIcqiITl/lRz0hTfI9N98jF0dDdvKIodtez4BVlBm8a2Rzt/5zy0kxpU7pnuMLDH7onbLCrVkc71LMXPuNqODTAJiBXW5FZqiwR4kfayJrAEEWpOAZGq04ZEP4rESlfsQwn8CYgLjBYQpRiWOPBfHcpo8NV3g1ommyDfeSlDUPRdafqSmRIInZVMEv7KnOz9wIZAq/y37ahzaSeVm8GbxrZHO3/nPLSTGlTume4+pYVeLRtaskkqgQgSDTlyR9CsyrtvyKPMiszlYnHMRX8jDyLgwgUlhMYYKs3NRf5UdEGL5oUAW6X4OaSlZNDaG0Scl8ATn0YhGevEPL99aD9g4f9ngwGmxOgfUFL/3LCrlhxx7MhMKLctXa7UswTxugOm0X+2KGToSA8b85TOO5vUlX3MhEqc8qIhAC7tc5Tc9/MoEZzz1nrbFsvz8yRdGCocf8srVE/opvRJ/twAqTawDjC4qxlg+EkoPphJPBhvedQ7cWDVkhGcOesASDvo9zRCqJdv8EPglgg1xaKeCPJ8hpC88OqnQChOkESQC1ww8H4HNIc2ldAcUMTwKfJc31kutwegFAoUJO74XCPpGuHrQD+sIyDlY/c6Xwl6vP6I81vi5fZFxWNNFJfoRyXxQ==".aesDecrypt(password: "SecretPassphrase")?.toDic()?["bundle_id"] ?? "NO")")
     }
 }
