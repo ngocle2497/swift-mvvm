@@ -27,7 +27,6 @@ protocol FontProtocol {
 struct ThemeManager {
     fileprivate static var colorShared: ColorProtocol = DarkColorTheme()
     fileprivate static var fontShared: FontProtocol = DefaultFont()
-    
    static func updateTheme(_ colorTheme: ColorTheme) {
         switch colorTheme {
         case .dark:

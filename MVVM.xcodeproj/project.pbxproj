@@ -16,7 +16,6 @@
 		12221A762BA0461E00DD9FCB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12221A782BA0461E00DD9FCB /* Localizable.strings */; };
 		12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12221A7B2BA0468400DD9FCB /* Strings.swift */; };
 		122A45C82B9817EC001691BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45C72B9817EC001691BD /* AppDelegate.swift */; };
-		122A45D12B9817ED001691BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122A45D02B9817ED001691BD /* Assets.xcassets */; };
 		122A45D42B9817ED001691BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122A45D22B9817ED001691BD /* LaunchScreen.storyboard */; };
 		122A45E12B981B9C001691BD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45E02B981B9C001691BD /* UserModel.swift */; };
 		122A45E32B981C92001691BD /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A45E22B981C92001691BD /* ApiConstant.swift */; };
@@ -48,6 +47,10 @@
 		127061062B99650B0099ACE6 /* UIViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */; };
 		127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061072B9977630099ACE6 /* Color+Utilities.swift */; };
 		1270610A2B99C5D10099ACE6 /* Button+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061092B99C5D10099ACE6 /* Button+Utilities.swift */; };
+		128E17242BA2E638003DF928 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 128E17232BA2E638003DF928 /* Base.xcconfig */; };
+		128E17282BA2F040003DF928 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 128E17272BA2F040003DF928 /* Base.xcassets */; };
+		128E172F2BA2FA91003DF928 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E172E2BA2FA91003DF928 /* Images.swift */; };
+		128E17312BA2FE59003DF928 /* swift5.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 128E17302BA2FE59003DF928 /* swift5.stencil */; };
 		12F23B102BA2A00A002393CE /* Blurhash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F23B0F2BA2A00A002393CE /* Blurhash.swift */; };
 		12F23B122BA2A017002393CE /* BlurhashLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F23B112BA2A017002393CE /* BlurhashLoader.swift */; };
 		12F23B142BA2B806002393CE /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F23B132BA2B806002393CE /* ImageTransition.swift */; };
@@ -67,7 +70,6 @@
 		12221A7B2BA0468400DD9FCB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		122A45C42B9817EC001691BD /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A45C72B9817EC001691BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		122A45D02B9817ED001691BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		122A45D32B9817ED001691BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122A45D52B9817ED001691BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		122A45E02B981B9C001691BD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -100,11 +102,14 @@
 		127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utilities.swift"; sourceTree = "<group>"; };
 		127061072B9977630099ACE6 /* Color+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utilities.swift"; sourceTree = "<group>"; };
 		127061092B99C5D10099ACE6 /* Button+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Utilities.swift"; sourceTree = "<group>"; };
+		128E17232BA2E638003DF928 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		128E17272BA2F040003DF928 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
+		128E172E2BA2FA91003DF928 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		128E17302BA2FE59003DF928 /* swift5.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swift5.stencil; sourceTree = "<group>"; };
 		12F23B0F2BA2A00A002393CE /* Blurhash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blurhash.swift; sourceTree = "<group>"; };
 		12F23B112BA2A017002393CE /* BlurhashLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurhashLoader.swift; sourceTree = "<group>"; };
 		12F23B132BA2B806002393CE /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
-		12F23B4F2BA2D050002393CE /* MVVM copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MVVM copy-Info.plist"; path = "/Users/ngoc.le/Desktop/MVVM/MVVM copy-Info.plist"; sourceTree = "<absolute>"; };
-		12F23B8A2BA2D0AA002393CE /* MVVM copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MVVM copy2-Info.plist"; path = "/Users/ngoc.le/Desktop/MVVM/MVVM copy2-Info.plist"; sourceTree = "<absolute>"; };
+		12F23B8D2BA2D2C0002393CE /* Default.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Default.xcassets; sourceTree = "<group>"; };
 		52626BDC460AF764F16C05F0 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9E5DA0A70CE0C521F13330 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		7E522B2198A4EFC18AFDF704 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 		12221A622BA0084F00DD9FCB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				128E172C2BA2F73C003DF928 /* Assets */,
 				12221A732BA045E400DD9FCB /* Localizable */,
 				12221A632BA0085600DD9FCB /* Fonts */,
 			);
@@ -190,12 +196,11 @@
 			isa = PBXGroup;
 			children = (
 				12221A712BA0439D00DD9FCB /* swiftgen.yml */,
+				128E17302BA2FE59003DF928 /* swift5.stencil */,
 				122A45C62B9817EC001691BD /* MVVM */,
 				122A45C52B9817EC001691BD /* Products */,
 				4A001E1D376410D6663CE0CE /* Pods */,
 				0E5C0EAEE013DC779323E831 /* Frameworks */,
-				12F23B4F2BA2D050002393CE /* MVVM copy-Info.plist */,
-				12F23B8A2BA2D0AA002393CE /* MVVM copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +215,7 @@
 		122A45C62B9817EC001691BD /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				128E17222BA2E614003DF928 /* ConfigEnvironment */,
 				122AD8272BA15B3B00F6660C /* CustomViews */,
 				12221A622BA0084F00DD9FCB /* Resources */,
 				126B18DC2B9EA21600B727D2 /* Utils */,
@@ -218,7 +224,6 @@
 				122A45DD2B981815001691BD /* Model */,
 				122A45DB2B9817F2001691BD /* View */,
 				122A45C72B9817EC001691BD /* AppDelegate.swift */,
-				122A45D02B9817ED001691BD /* Assets.xcassets */,
 				122A45D22B9817ED001691BD /* LaunchScreen.storyboard */,
 				122A45D52B9817ED001691BD /* Info.plist */,
 			);
@@ -383,6 +388,32 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		128E17222BA2E614003DF928 /* ConfigEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				128E17232BA2E638003DF928 /* Base.xcconfig */,
+			);
+			path = ConfigEnvironment;
+			sourceTree = "<group>";
+		};
+		128E172C2BA2F73C003DF928 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				128E172D2BA2FA7A003DF928 /* Generated */,
+				12F23B8D2BA2D2C0002393CE /* Default.xcassets */,
+				128E17272BA2F040003DF928 /* Base.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		128E172D2BA2FA7A003DF928 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				128E172E2BA2FA91003DF928 /* Images.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		4A001E1D376410D6663CE0CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +431,7 @@
 			buildConfigurationList = 122A45D82B9817ED001691BD /* Build configuration list for PBXNativeTarget "MVVM" */;
 			buildPhases = (
 				BED6764EB40D08743DE811B8 /* [CP] Check Pods Manifest.lock */,
+				128E172B2BA2F08B003DF928 /* ShellScript */,
 				12221A6E2BA0429C00DD9FCB /* SwiftGen */,
 				122A45C02B9817EC001691BD /* Sources */,
 				122A45C12B9817EC001691BD /* Frameworks */,
@@ -457,12 +489,14 @@
 				127061022B99638B0099ACE6 /* LoginViewController.xib in Resources */,
 				122A45D42B9817ED001691BD /* LaunchScreen.storyboard in Resources */,
 				12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */,
+				128E17242BA2E638003DF928 /* Base.xcconfig in Resources */,
 				12221A672BA0087500DD9FCB /* PoppinsLatin-Bold.ttf in Resources */,
 				12221A692BA0087500DD9FCB /* PoppinsLatin-Regular.ttf in Resources */,
 				12221A762BA0461E00DD9FCB /* Localizable.strings in Resources */,
 				123FA0A02B9AF18E004B1197 /* HomeViewController.xib in Resources */,
-				122A45D12B9817ED001691BD /* Assets.xcassets in Resources */,
+				128E17282BA2F040003DF928 /* Base.xcassets in Resources */,
 				127060FC2B9960BB0099ACE6 /* SplashViewController.xib in Resources */,
+				128E17312BA2FE59003DF928 /* swift5.stencil in Resources */,
 				12221A722BA0439D00DD9FCB /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +521,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
+		128E172B2BA2F08B003DF928 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/${ASSET_NAME}.xcassets\nDES=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/Base.xcassets\necho \"ABC: ${SCHEME_SUFFIX}\"\nif [ ! -d \"${SOURCE}\" ] ; then\n    echo \"Source directory ${SOURCE} not found.\"\n    exit 1\nfi\ncp -R \"${SOURCE}/.\" \"${DES}\"\n";
 		};
 		6C7F2F444FB378207878E9CF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -547,6 +598,7 @@
 				12F23B142BA2B806002393CE /* ImageTransition.swift in Sources */,
 				122AD8352BA1872F00F6660C /* Thumbhash.swift in Sources */,
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
+				128E172F2BA2FA91003DF928 /* Images.swift in Sources */,
 				12F23B122BA2A017002393CE /* BlurhashLoader.swift in Sources */,
 				122AD8332BA1684C00F6660C /* ThumbhashLoader.swift in Sources */,
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
@@ -598,6 +650,7 @@
 /* Begin XCBuildConfiguration section */
 		122A45D62B9817ED001691BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 128E17232BA2E638003DF928 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -659,6 +712,7 @@
 		};
 		122A45D72B9817ED001691BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 128E17232BA2E638003DF928 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;

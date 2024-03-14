@@ -4,6 +4,7 @@ class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating 
     
     @Global var appSetting: AppSettings
     
+    @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var remoteImage: BRemoteImage!
     @IBOutlet weak var lbterm: UITextView!
     @IBOutlet weak var loginButton: UIButton!
@@ -13,6 +14,11 @@ class LoginViewController: UIViewController, UITextViewDelegate, GlobalUpdating 
         super.viewDidLoad()
         setupView()
         registerUpdates()
+        
+        image1.image = SImages.icEmail
+        
+
+        
     }
     
     func globalUpdate() {
