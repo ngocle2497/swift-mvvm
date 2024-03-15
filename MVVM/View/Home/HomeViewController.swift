@@ -1,12 +1,12 @@
 import UIKit
 
-class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
+class HomeViewController: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var homeViewModel: HomeViewModel = HomeViewModel()
     var longPressedEnabled = false
-    var data = Array(repeating: 0, count: 1_000_000)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,11 +16,6 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         
         collectionView?.dataSource = self
         collectionView?.delegate = self
-
-        // Do any additional setup after loading the view.
-
-        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress))
-        collectionView?.addGestureRecognizer(gesture)
         
     }
     
@@ -32,35 +27,45 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         print("Home Updating")
     }
     
-    @objc func onLongPress(_ gesture: UILongPressGestureRecognizer) {
-    }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate,
                               UICollectionViewDataSource,
                               UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        data.count
+        homeViewModel.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
+        cell.setData(cellData: homeViewModel.data[indexPath.row])
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.size.width - 10 * 4) / 3
-        return CGSize(width: width, height: width)
+        
+        let width = (UIScreen.main.bounds.size.width) - 16
+        
+        let cellData = homeViewModel.data[indexPath.row]
+        let avatarSize = 50.0
+        let imageHeight = cellData.image != nil ? 200 : 0
+        let contentHeight = heightForLable(text: cellData.content, font: .title2Regular, width: width)
+        let contentSpacing = imageHeight == 0 ? 12.0 : 24.0
+        
+        return CGSize(width: width, height: Double(imageHeight) + contentHeight + avatarSize + contentSpacing)
     }
     
-    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        true
+    func heightForLable(text:String, font:UIFont, width:CGFloat) -> CGFloat {
+        // pass string, font, LableWidth
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+         label.numberOfLines = 0
+         label.lineBreakMode = NSLineBreakMode.byWordWrapping
+         label.font = font
+         label.text = text
+         label.sizeToFit()
+
+         return label.frame.height
     }
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let item = data.remove(at: sourceIndexPath.row)
-        data.insert(item, at: destinationIndexPath.row)
-    }
-    
 }
+

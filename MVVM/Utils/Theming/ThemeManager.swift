@@ -84,13 +84,13 @@ extension UIFont {
     
     static var title2Regular: UIFont {
         get {
-            ThemeManager.fontShared.title2Bold
+            ThemeManager.fontShared.title2Regular
         }
     }
     
     static  var title2Bold: UIFont {
         get {
-            ThemeManager.fontShared.title2Regular
+            ThemeManager.fontShared.title2Bold
         }
     }
 }

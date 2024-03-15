@@ -10,12 +10,12 @@ struct DefaultFont: FontProtocol {
     
     var heading4: UIFont = UIFont(named: .bold, size: 32.0)
     
-    var title1Regular: UIFont = UIFont(named: .regular, size: 28.0)
+    var title1Regular: UIFont = UIFont(named: .regular, size: 22.0)
     
-    var title1Bold: UIFont = UIFont(named: .bold, size: 24.0)
+    var title1Bold: UIFont = UIFont(named: .bold, size: 22.0)
     
-    var title2Regular: UIFont = UIFont(named: .regular, size: 28.0)
+    var title2Regular: UIFont = UIFont(named: .regular, size: 18.0)
     
-    var title2Bold: UIFont = UIFont(named: .bold, size: 24.0)
+    var title2Bold: UIFont = UIFont(named: .bold, size: 18.0)
     
 }

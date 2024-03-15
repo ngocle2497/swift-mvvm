@@ -8,17 +8,37 @@
 import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var imageView: BRemoteImage!
+    
+    @IBOutlet weak var imageContent: BRemoteImage!
+    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var avatar: BRemoteImage!
     override func awakeFromNib() {
         super.awakeFromNib()
-        setData()
+        setUpView()
     }
     
-    func setData() {
-        imageView.placeholderHash = .blurhash("LnGIZJS$bws._4f+kXof.9afkDWq")
-        imageView.source = "https://fastly.picsum.photos/id/905/200/300.jpg?hmac=uLUlIwyKcu9AtTY3uOL04O0gbesMVu-yNVRvCsF1xD8"
-       
+    func setUpView() {
+        dump(name.font)
+//        name.font = UIFont(name: ".SFUI-Regular", size: 18)
+//        name.textColor = .primaryContent
+//
+        content.font = .title2Regular
+        dump(content.font)
+//        content.textColor = .primaryContent
+    }
+    
+    func setData(cellData: NewsFeed) {
+        name.text = cellData.name
+        content.text = cellData.content
+        avatar.placeholderHash = .blurhash("LKN]Rv%2Tw=w]~RBVZRi};RPxuwH")
+        avatar.source = cellData.avatar
+        if let imageUrl = cellData.image {
+            imageContent.source = imageUrl
+            imageContent.isHidden = false
+        } else {
+            imageContent.isHidden = true
+        }
     }
 
 }
