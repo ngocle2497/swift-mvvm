@@ -33,8 +33,8 @@ extension API: TargetType {
     }
     
     var task: Moya.Task {
-        var parameters: [String: Any] = [:]
-        var encoding: ParameterEncoding = URLEncoding.queryString
+        let parameters: [String: Any] = [:]
+        let encoding: ParameterEncoding = URLEncoding.queryString
         switch self {
         case .login:
             return .requestParameters(parameters: parameters, encoding: encoding)

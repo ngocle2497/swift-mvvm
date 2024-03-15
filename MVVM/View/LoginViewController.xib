@@ -10,12 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="MVVM" customModuleProvider="target">
             <connections>
-                <outlet property="image1" destination="eyc-oZ-ZMQ" id="e4X-Ax-VS8"/>
                 <outlet property="inputEmail" destination="gVd-yo-uWw" id="HKa-cD-2dd"/>
                 <outlet property="inputPassword" destination="gOY-dF-jWK" id="w7B-A5-awr"/>
                 <outlet property="lbterm" destination="j0E-jk-ozs" id="qk9-rt-z9j"/>
                 <outlet property="loginButton" destination="EK9-bL-RNk" id="0o1-bA-oTs"/>
-                <outlet property="remoteImage" destination="5DA-FB-82H" id="ZHx-59-bjh"/>
+                <outlet property="remoteImage" destination="5DA-FB-82H" id="Ekn-fE-6ul"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -128,25 +127,28 @@
                         <action selector="onLoginPressed:" destination="-1" eventType="touchUpInside" id="47q-zQ-Rbd"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DA-FB-82H" customClass="BRemoteImage" customModule="MVVM" customModuleProvider="target">
-                    <rect key="frame" x="76.666666666666686" y="362" width="240" height="288"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DA-FB-82H" customClass="BRemoteImage" customModule="MVVM" customModuleProvider="target">
+                    <rect key="frame" x="96.666666666666686" y="362" width="200" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="5DA-FB-82H" secondAttribute="height" multiplier="1:1.2" id="jfP-wb-BWX"/>
-                        <constraint firstAttribute="width" constant="240" id="nyh-Ql-OOI"/>
+                        <constraint firstAttribute="width" secondItem="5DA-FB-82H" secondAttribute="height" id="jfP-wb-BWX"/>
+                        <constraint firstAttribute="width" constant="200" id="nyh-Ql-OOI"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="linkColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eyc-oZ-ZMQ">
-                    <rect key="frame" x="76.666666666666686" y="662" width="240" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="240" id="D0Q-yh-7qH"/>
-                        <constraint firstAttribute="width" secondItem="eyc-oZ-ZMQ" secondAttribute="height" multiplier="15:8" id="VNc-2w-lYZ"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="eyc-oZ-ZMQ" firstAttribute="top" secondItem="5DA-FB-82H" secondAttribute="bottom" constant="12" id="1Xx-ta-sKr"/>
                 <constraint firstItem="EK9-bL-RNk" firstAttribute="top" secondItem="BNk-Q6-z2c" secondAttribute="bottom" constant="20" id="8QH-hA-o86"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j0E-jk-ozs" secondAttribute="trailing" constant="32" id="B8J-r3-InB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xhg-gQ-15T" secondAttribute="trailing" constant="16" id="BP1-im-L3M"/>
@@ -154,7 +156,6 @@
                 <constraint firstItem="j0E-jk-ozs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CZS-Kq-Jap"/>
                 <constraint firstItem="EK9-bL-RNk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ChG-f9-3wu"/>
                 <constraint firstItem="xhg-gQ-15T" firstAttribute="top" secondItem="j0E-jk-ozs" secondAttribute="bottom" constant="12" id="CpJ-0k-Sdn"/>
-                <constraint firstItem="eyc-oZ-ZMQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IpI-fA-ZSa"/>
                 <constraint firstItem="Rgw-6d-ewk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MiE-fl-nZT"/>
                 <constraint firstItem="5DA-FB-82H" firstAttribute="top" secondItem="EK9-bL-RNk" secondAttribute="bottom" constant="16" id="QiS-6S-LmD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BNk-Q6-z2c" secondAttribute="trailing" constant="16" id="XWN-vL-ds9"/>
@@ -174,6 +175,9 @@
         <image name="ic_password" width="28" height="31"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -39,7 +39,6 @@ extension GlobalUpdating {
                 }
             }
         }
-        
         globalUpdate()
     }
 }

@@ -1,45 +1,33 @@
 import UIKit
 
-class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
+class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
-    var collectionView: UICollectionView?
-    let cellID = "CELL_ID"
-    var arrIndexPath = [IndexPath]()
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var longPressedEnabled = false
-    var data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    var data = Array(repeating: 0, count: 1_000_000)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
-        collectionView?.translatesAutoresizingMaskIntoConstraints = false;
-        view.addSubview(collectionView!)
         
-        collectionView?.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        collectionView?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        collectionView?.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        collectionView?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
         
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionView?.setCollectionViewLayout(collectionViewLayout, animated: true)
-        collectionViewLayout.scrollDirection = .vertical
-        collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        collectionViewLayout.minimumLineSpacing = 10
-        collectionViewLayout.minimumInteritemSpacing = 10
-        
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
         collectionView?.dataSource = self
         collectionView?.delegate = self
-        //        collectionView?.dragDelegate = self
-        //        collectionView?.dropDelegate = self
-        
+
         // Do any additional setup after loading the view.
-        
+
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress))
         collectionView?.addGestureRecognizer(gesture)
+        
     }
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return navigationController!.viewControllers.count > 1
+    }
+    
     func update() {
         print("Home Updating")
     }
@@ -56,30 +44,10 @@ extension HomeViewController: UICollectionViewDelegate,
         data.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if arrIndexPath.contains(indexPath) == false {
-            cell.transform = CGAffineTransform(translationX: 0, y: 20)
-            cell.alpha = 0
-            UIView.animate(withDuration: 0.5, delay: Double(indexPath.row) * 0.01) {
-                cell.transform = CGAffineTransform(translationX: 0, y: 0)
-                cell.alpha = 1
-            }
-            arrIndexPath.append(indexPath)
-        }
-        
-        
-    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
-        cell.backgroundColor = UIColor(
-            red:   .random(),
-            green: .random(),
-            blue:  .random(),
-            alpha: 1.0
-        )
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -95,10 +63,4 @@ extension HomeViewController: UICollectionViewDelegate,
         data.insert(item, at: destinationIndexPath.row)
     }
     
-}
-
-extension CGFloat {
-    static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
 }

@@ -2,11 +2,14 @@ import Foundation
 import UIKit
 import SDWebImage
 
+@IBDesignable
 class BRemoteImage: UIView {
     static let contextSourceKey = SDWebImageContextOption(rawValue: "source")
     
-    private let sdImageView = SDAnimatedImageView(frame: .zero)
+    var sdImageView: SDAnimatedImageView = SDAnimatedImageView(frame: .zero)
+    
     private let imageManager = SDWebImageManager(cache: SDImageCache.shared, loader: SDImageLoadersManager.shared)
+    
     private var loadingImage = false
     
     var loadingOptions: SDWebImageOptions = [.retryFailed, .handleCookies]
@@ -19,7 +22,7 @@ class BRemoteImage: UIView {
     
     var imageTintColor: UIColor?
     
-    var transition: ImageTransition? = ImageTransition(duration: 2, effect: .crossDissolve)
+    var transition: ImageTransition? = ImageTransition(duration: 0.6, effect: .crossDissolve)
     
     var source: String? {
         didSet {
@@ -63,24 +66,23 @@ class BRemoteImage: UIView {
         }
     }
     
-    public override func didMoveToWindow() {
-        if window == nil {
-            cancelPendingOperation()
-        } else {
-            loadPlaceholderIfNecessary()
-        }
+    deinit {
+        cancelPendingOperation()
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    private func setupView() {
         addSubview(sdImageView)
-        BRemoteImage.registerLoaders()
+        layer.cornerCurve = .continuous
         clipsToBounds = true
         sdImageView.translatesAutoresizingMaskIntoConstraints = false
         sdImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        sdImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         sdImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        sdImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         sdImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         
         sdImageView.contentMode = contentFit.toContentMode()
@@ -88,7 +90,6 @@ class BRemoteImage: UIView {
         sdImageView.layer.masksToBounds = false
         sdImageView.layer.magnificationFilter = .trilinear
         sdImageView.layer.minificationFilter = .trilinear
-        
     }
     
     private func reload() {
@@ -177,7 +178,7 @@ class BRemoteImage: UIView {
     }
     
     private  func loadPlaceholderIfNecessary() {
-        guard (placeholder != nil), needShowPlaceholder else {
+        guard (placeholder != nil), isViewEmpty, needShowPlaceholder else {
             return
         }
         var context: [SDWebImageContextOption: Any] = [:]
@@ -205,7 +206,7 @@ class BRemoteImage: UIView {
     }
     
     private func displayPlaceholderIfNecessary() {
-        guard let placeholder = placeholderImage, loadingImage else {
+        guard let placeholder = placeholderImage, isViewEmpty, loadingImage else {
             return
         }
         setImage(placeholder, contentFit: .cover, isPlaceholder: true)
@@ -228,11 +229,41 @@ class BRemoteImage: UIView {
         pendingOperation = nil
     }
     
-    private static func registerLoaders() {
+    static func registerLoaders() {
         SDImageLoadersManager.shared.addLoader(BlurhashLoader())
         SDImageLoadersManager.shared.addLoader(ThumbhashLoader())
         //      SDImageLoadersManager.shared.addLoader(PhotoLibraryAssetLoader())
     }
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0.0 {
+        didSet {
+//            layer.borderWidth =  borderWidth
+            let dashBorder = CAShapeLayer()
+            dashBorder.lineWidth = borderWidth
+            dashBorder.strokeColor = UIColor.red.cgColor
+            dashBorder.lineDashPattern = [4, 2] as [NSNumber]
+            dashBorder.frame = bounds
+            dashBorder.fillColor = nil
+            if cornerRadius > 0 {
+                dashBorder.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+            } else {
+                dashBorder.path = UIBezierPath(rect: bounds).cgPath
+            }
+            layer.addSublayer(dashBorder)
+        }
+    }
+    
+}
+
+extension BRemoteImage {
+    
 }
 
 enum PlaceholderHash: Equatable {

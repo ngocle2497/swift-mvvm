@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+@IBDesignable
 class BView: UIView {
     lazy var nibName = String(describing: type(of: self))
     

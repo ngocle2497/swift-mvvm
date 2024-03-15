@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120116032BA402D700C62DBF /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120116012BA402D700C62DBF /* ItemCollectionViewCell.swift */; };
+		120116042BA402D700C62DBF /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120116022BA402D700C62DBF /* ItemCollectionViewCell.xib */; };
 		12221A612BA007BD00DD9FCB /* DefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12221A602BA007BD00DD9FCB /* DefaultFont.swift */; };
 		12221A672BA0087500DD9FCB /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A642BA0087500DD9FCB /* PoppinsLatin-Bold.ttf */; };
 		12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */; };
@@ -43,7 +45,6 @@
 		127060FC2B9960BB0099ACE6 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 127060FA2B9960BB0099ACE6 /* SplashViewController.xib */; };
 		127061012B99638B0099ACE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127060FF2B99638B0099ACE6 /* LoginViewController.swift */; };
 		127061022B99638B0099ACE6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 127061002B99638B0099ACE6 /* LoginViewController.xib */; };
-		127061042B9964E80099ACE6 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061032B9964E80099ACE6 /* SplashViewModel.swift */; };
 		127061062B99650B0099ACE6 /* UIViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */; };
 		127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061072B9977630099ACE6 /* Color+Utilities.swift */; };
 		1270610A2B99C5D10099ACE6 /* Button+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127061092B99C5D10099ACE6 /* Button+Utilities.swift */; };
@@ -60,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120116012BA402D700C62DBF /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		120116022BA402D700C62DBF /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		12221A602BA007BD00DD9FCB /* DefaultFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFont.swift; sourceTree = "<group>"; };
 		12221A642BA0087500DD9FCB /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
 		12221A652BA0087500DD9FCB /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 		127060FA2B9960BB0099ACE6 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		127060FF2B99638B0099ACE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = MVVM/View/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		127061002B99638B0099ACE6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginViewController.xib; path = MVVM/View/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
-		127061032B9964E80099ACE6 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		127061052B99650B0099ACE6 /* UIViewController+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utilities.swift"; sourceTree = "<group>"; };
 		127061072B9977630099ACE6 /* Color+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utilities.swift"; sourceTree = "<group>"; };
 		127061092B99C5D10099ACE6 /* Button+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Utilities.swift"; sourceTree = "<group>"; };
@@ -136,6 +138,15 @@
 				52626BDC460AF764F16C05F0 /* Pods_MVVM.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		120116002BA4024300C62DBF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				120116012BA402D700C62DBF /* ItemCollectionViewCell.swift */,
+				120116022BA402D700C62DBF /* ItemCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		12221A5E2BA0077300DD9FCB /* Color */ = {
@@ -308,6 +319,7 @@
 		123FA09C2B9AF182004B1197 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				120116002BA4024300C62DBF /* Cell */,
 				123FA09D2B9AF18E004B1197 /* HomeViewController.swift */,
 				123FA09E2B9AF18E004B1197 /* HomeViewController.xib */,
 			);
@@ -372,7 +384,6 @@
 		127060FD2B99636C0099ACE6 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				127061032B9964E80099ACE6 /* SplashViewModel.swift */,
 				127060F92B9960BB0099ACE6 /* SplashViewController.swift */,
 				127060FA2B9960BB0099ACE6 /* SplashViewController.xib */,
 			);
@@ -486,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120116042BA402D700C62DBF /* ItemCollectionViewCell.xib in Resources */,
 				127061022B99638B0099ACE6 /* LoginViewController.xib in Resources */,
 				122A45D42B9817ED001691BD /* LaunchScreen.storyboard in Resources */,
 				12221A682BA0087500DD9FCB /* PoppinsLatin-Medium.ttf in Resources */,
@@ -596,6 +608,7 @@
 				12221A7C2BA0468400DD9FCB /* Strings.swift in Sources */,
 				122AD8312BA1650000F6660C /* ImageCachePolicy.swift in Sources */,
 				12F23B142BA2B806002393CE /* ImageTransition.swift in Sources */,
+				120116032BA402D700C62DBF /* ItemCollectionViewCell.swift in Sources */,
 				122AD8352BA1872F00F6660C /* Thumbhash.swift in Sources */,
 				127061082B9977630099ACE6 /* Color+Utilities.swift in Sources */,
 				128E172F2BA2FA91003DF928 /* Images.swift in Sources */,
@@ -604,7 +617,6 @@
 				123FA09F2B9AF18E004B1197 /* HomeViewController.swift in Sources */,
 				126B18F12B9F12FF00B727D2 /* LightColorTheme.swift in Sources */,
 				12221A6B2BA00D8600DD9FCB /* UIFont+Utilities.swift in Sources */,
-				127061042B9964E80099ACE6 /* SplashViewModel.swift in Sources */,
 				122A45E12B981B9C001691BD /* UserModel.swift in Sources */,
 				126B18DF2B9EA23300B727D2 /* Global.swift in Sources */,
 				122A45E32B981C92001691BD /* ApiConstant.swift in Sources */,
