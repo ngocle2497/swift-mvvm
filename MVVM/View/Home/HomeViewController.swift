@@ -14,6 +14,12 @@ class HomeViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
         
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: view.frame.width, height: 100)
+
+            flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize
+        }
+        
         collectionView?.dataSource = self
         collectionView?.delegate = self
         
@@ -43,18 +49,18 @@ extension HomeViewController: UICollectionViewDelegate,
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let width = (UIScreen.main.bounds.size.width) - 16
-        
-        let cellData = homeViewModel.data[indexPath.row]
-        let avatarSize = 50.0
-        let imageHeight = cellData.image != nil ? 200 : 0
-        let contentHeight = heightForLable(text: cellData.content, font: .title2Regular, width: width)
-        let contentSpacing = imageHeight == 0 ? 12.0 : 24.0
-        
-        return CGSize(width: width, height: Double(imageHeight) + contentHeight + avatarSize + contentSpacing)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        let width = (UIScreen.main.bounds.size.width) - 16
+//        
+//        let cellData = homeViewModel.data[indexPath.row]
+//        let avatarSize = 50.0
+//        let imageHeight = cellData.image != nil ? 200 : 0
+//        let contentHeight = heightForLable(text: cellData.content, font: .title2Regular, width: width)
+//        let contentSpacing = imageHeight == 0 ? 12.0 : 24.0
+//        
+//        return CGSize(width: width, height: Double(imageHeight) + contentHeight + avatarSize + contentSpacing)
+//    }
     
     func heightForLable(text:String, font:UIFont, width:CGFloat) -> CGFloat {
         // pass string, font, LableWidth

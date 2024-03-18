@@ -1,10 +1,3 @@
-//
-//  ItemCollectionViewCell.swift
-//  MVVM
-//
-//  Created by Ngoc H. Le on 15/03/2024.
-//
-
 import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
@@ -19,13 +12,14 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpView() {
-        dump(name.font)
-//        name.font = UIFont(name: ".SFUI-Regular", size: 18)
-//        name.textColor = .primaryContent
-//
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        content.widthAnchor.constraint(equalTo: self.contentView.widthAnchor).isActive = true
+        
+        name.font = .title2Bold
+        name.textColor = .primaryContent
         content.font = .title2Regular
-        dump(content.font)
-//        content.textColor = .primaryContent
+        content.textColor = .secondaryContent
     }
     
     func setData(cellData: NewsFeed) {
@@ -34,11 +28,14 @@ class ItemCollectionViewCell: UICollectionViewCell {
         avatar.placeholderHash = .blurhash("LKN]Rv%2Tw=w]~RBVZRi};RPxuwH")
         avatar.source = cellData.avatar
         if let imageUrl = cellData.image {
+            imageContent.topAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
+            imageContent.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
+            
             imageContent.source = imageUrl
             imageContent.isHidden = false
         } else {
             imageContent.isHidden = true
+            content.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
         }
     }
-
 }
